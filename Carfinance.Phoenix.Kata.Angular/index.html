@@ -9,8 +9,58 @@
     <script src="Scripts/angular.min.js"></script>
     <script src="Scripts/angular-route.min.js"></script>
     <script src="app/module.js"></script>
+    <script src="app/list/list-controller.js"></script>
 </head>
 <body ng-app="PhoenixKata">
-    Start building....
+    <div ng-controller="ListController as vm">
+        <div class="text-right">
+            <button type="button" class="btn btn-primary pull-right">New Booking</button>
+        </div>
+        <table class="table table-striped">
+
+            <thead>
+                <tr>
+                    <th>Contact Name</th>
+                    <th>Contact Number</th>
+                    <th>No of Diners</th>
+                    <th>Table Number</th>
+                    <th>Booking Time</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr ng-repeat="booking in vm.bookings | orderBy: 'bookingTime'" ng-class="{'text-danger': booking.numberOfPeople > '6', 'text-primary': booking.numberOfPeople == '1'}">
+
+                    <td>{{booking.contactName}}</td>
+                    <td>{{booking.contactNumber}}</td>
+                    <td>{{booking.numberOfPeople}}</td>
+                    <td>{{booking.tableNumber}}</td>
+                    <td>{{booking.bookingTime | date: "dd/MM/yyyy HH:mm"}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <h4><b>Create Booking</b></h4>
+    <div class="form-group">
+        <label for="usr">Contact Name:</label>
+        <input type="text" class="form-control" id="usr">
+    </div>
+    <div class="form-group">
+        <label for="usr">Contact Number:</label>
+        <input type="number" class="form-control" id="usr">
+    </div>
+    <div class="form-group">
+        <label for="usr">Number of People:</label>
+        <input type="number" class="form-control" id="usr">
+    </div>
+    <div class="form-group">
+        <label for="usr">Table Number:</label>
+        <input type="number" class="form-control" id="usr">
+    </div>
+    <div class="form-group">
+        <label for="usr">Booking Time:</label>
+        <input type="datetime-local" class="form-control" id="usr">
+    </div>
 </body>
 </html>
