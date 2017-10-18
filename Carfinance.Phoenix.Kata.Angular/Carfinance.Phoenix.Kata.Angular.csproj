@@ -158,8 +158,12 @@
     <Compile Include="Services\Interfaces\IDataService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\detail\detail-controller.js" />
+    <Content Include="app\detail\detail.html" />
     <Content Include="app\list\list-controller.js" />
+    <Content Include="app\list\list.html" />
     <Content Include="app\module.js" />
+    <Content Include="app\route.js" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />

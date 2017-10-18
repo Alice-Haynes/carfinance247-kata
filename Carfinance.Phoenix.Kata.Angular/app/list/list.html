@@ -1,0 +1,29 @@
+﻿<div ng-controller="ListController as vm">
+    <div class="text-right">
+        <button type="button" class="btn btn-primary pull-right">New Booking</button>
+    </div>
+    <table class="table table-striped">
+
+        <thead>
+            <tr>
+                <th>Contact Name</th>
+                <th>Contact Number</th>
+                <th>No of Diners</th>
+                <th>Table Number</th>
+                <th>Booking Time</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr ng-repeat="booking in vm.bookings | orderBy: 'bookingTime'" ng-class="{'text-danger': booking.numberOfPeople > '6', 'text-primary': booking.numberOfPeople == '1'}">
+
+                <td>{{booking.contactName}}</td>
+                <td>{{booking.contactNumber}}</td>
+                <td>{{booking.numberOfPeople}}</td>
+                <td>{{booking.tableNumber}}</td>
+                <td>{{booking.bookingTime | date: "dd/MM/yyyy HH:mm"}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
