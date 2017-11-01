@@ -16,16 +16,7 @@
             }, function () {
             });
 
-            // ifs and that in here?
-
-            // .success(function (data, status, headers, config) {
-            // vm.save = function () {
-            //    $location.path('list');
-            // })
-           
-            // .error(function (data, status, header, config) {
-            // });
-            // return errors from tests
+            
         }
 
     }
