@@ -1,6 +1,6 @@
 ﻿<div ng-controller="ListController as vm">
     <div class="text-right">
-        <button type="button" class="btn btn-primary pull-right">New Booking</button>
+        <button type="button" class="btn btn-primary pull-right" ng-click="vm.goToPage()">New Booking</button>
     </div>
     <table class="table table-striped">
 
@@ -17,7 +17,7 @@
         <tbody>
 
             <tr ng-repeat="booking in vm.bookings | orderBy: 'bookingTime'" ng-class="{'text-danger': booking.numberOfPeople > '6', 'text-primary': booking.numberOfPeople == '1'}">
-
+                <a href="list.html">list.html</a>
                 <td>{{booking.contactName}}</td>
                 <td>{{booking.contactNumber}}</td>
                 <td>{{booking.numberOfPeople}}</td>
