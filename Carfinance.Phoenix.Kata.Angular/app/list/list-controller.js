@@ -10,7 +10,7 @@
         vm.goToPage = function() {
             $location.path('detail');
         }
-
+        
         vm.table1 = {
             name: "Mark Quinn",
             phoneNo: "0782537383",
@@ -28,3 +28,4 @@
         getBookings();
     }
 })();
+ 

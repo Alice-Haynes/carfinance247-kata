@@ -2,22 +2,23 @@
     <h4><b>Create Booking</b></h4>
     <div class="form-group">
         <label for="usr">Contact Name:</label>
-        <input type="text" class="form-control" id="usr">
+        <input type="text" class="form-control" id="usr" ng-model="vm.booking.contactName">
     </div>
     <div class="form-group">
         <label for="usr">Contact Number:</label>
-        <input type="number" class="form-control" id="usr">
+        <input type="number" class="form-control" id="usr" ng-model="vm.booking.contactNumber">
     </div>
     <div class="form-group">
         <label for="usr">Number of People:</label>
-        <input type="number" class="form-control" id="usr">
+        <input type="number" class="form-control" id="usr" ng-model="vm.booking.numberOfPeople">
     </div>
     <div class="form-group">
         <label for="usr">Table Number:</label>
-        <input type="number" class="form-control" id="usr">
+        <input type="number" class="form-control" id="usr" ng-model="vm.booking.tableNumber">
     </div>
     <div class="form-group">
         <label for="usr">Booking Time:</label>
-        <input type="datetime-local" class="form-control" id="usr">
+        <input type="datetime-local" class="form-control" id="usr" ng-model="vm.booking.bookingTime">
     </div>
+    <button type="button" class="btn btn-primary pull-right" ng-click="vm.save()">Save</button>
 </div>
