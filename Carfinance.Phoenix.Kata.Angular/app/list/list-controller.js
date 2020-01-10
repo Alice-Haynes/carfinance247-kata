@@ -3,10 +3,13 @@
 
     angular.module('PhoenixKata').controller('ListController', ListController);
 
-    ListController.$inject = ['$http'];
+    ListController.$inject = ['$http', '$location'];
 
-    function ListController($http) {
+    function ListController($http, $location) {
         var vm = this;
+        vm.goToPage = function() {
+            $location.path('detail');
+        }
         
         vm.table1 = {
             name: "Mark Quinn",
@@ -25,3 +28,4 @@
         getBookings();
     }
 })();
+ 

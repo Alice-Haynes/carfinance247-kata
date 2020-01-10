@@ -24,6 +24,16 @@ namespace Carfinance.Phoenix.Kata.Angular.Services
 
         public void CreateBooking(Booking booking)
         {
+            if (booking == null)
+            {
+                throw new System.ArgumentNullException();
+            }
+            if (booking.TableNumber > 4 || booking.TableNumber < 1)
+            {
+                throw new System.ArgumentOutOfRangeException("Table number " + booking.TableNumber + " does not exist");
+            }
+           
+            bookings.Add(booking);
         }
     }
 }

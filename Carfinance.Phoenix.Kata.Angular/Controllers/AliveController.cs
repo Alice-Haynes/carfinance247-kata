@@ -2,7 +2,7 @@
 
 namespace Carfinance.Phoenix.Kata.Angular.Controllers
 {
-    [Route("")]
+    [Route("alive")]
     public class AliveController : ApiController
     {
         public IHttpActionResult Get()
